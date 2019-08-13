@@ -68,9 +68,9 @@ https://www.ncl.ucar.edu/Applications/Scripts/homme_1.ncl
 https://github.com/zarzycki/ncl-zarzycki/tree/master/projects/regridding  
 NCL scripts provided in _postprocessing_ folder may be used to regrid the ne240 CLM outputs
 
-## Additional notes - from on Colin Zarzycki's help document
+## Additional notes about CESM-VR - from on Colin Zarzycki's help document
 NUMNODES edits env_mach_pes.xml. A rough starting point is ~1000 CPUs, Model has been run as low as 288 and as high
-as 4,608 on Cheyenne. The model should theoretically scale to ~20k CPUs, but I probably not ideal to push it above ~8k.  
+as 4,608 on Cheyenne. The model should theoretically scale to ~20k CPUs, but probably not ideal to push it above ~8k.  
 
 EPS_AAREA is a setting fix approved by Mariana Vertenstein that reduces the error tolerance associated with distorted grid elements. This does not impact conservation in F compsets.  
 
