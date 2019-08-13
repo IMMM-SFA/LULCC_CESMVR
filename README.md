@@ -54,6 +54,7 @@ cp $BASE_DIR/LULCC_CESMVR/user_mods/config_grids.xml .
 _Note_: config_grids.xml contains edits for both the ne240-ne240 (Colin) and ne30-ne240 grids (Anjana).
 
 ### Creating a new case with the cesm directory
+_Note_: _user_mods/env_mach_specific.xml_ has been updated as of July 2019. The modules would have changed after a major OS upgrade on CORI during the first week of Aug 2019. This machine file has to be updated to setup and build a case using the new modules on CORI.  
 
 Use the LULCC_CESMVR scripts to create and build a new case on the desired grid
 ```
