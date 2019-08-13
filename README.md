@@ -10,14 +10,14 @@ Model version used: CESMv2.0.0
 
 ## Repository structure
 
----scripts | ---user_mods | ---namelists | postprocessing
+---scripts | ---user_mods | ---namelists | --postprocessing
 
 ## Tutorial to set up CESM-SE on CORI
 ### Grids used: ne30_ne30 | ne30-ne240 | ne240-ne240
-We provide detailed notes on performing CESM simulations on NERSC CORI Haswell nodes using the SE dynamical core. The model may be configured to use any of the three grid combinations
-    1. ne30 - ne30    : coarse atm - coarse lnd
-    2. ne30 - ne240   : coarse atm - fine lnd
-    3. ne240 - ne240  : fine atm - fine lnd
+We provide detailed notes on performing CESM simulations on NERSC CORI Haswell nodes using the SE dynamical core. The model may be configured to use any of the three grid combinations  
+    1. ne30 - ne30    : coarse atm - coarse lnd  
+    2. ne30 - ne240   : coarse atm - fine lnd  
+    3. ne240 - ne240  : fine atm - fine lnd  
     
 ### Set user directory path
 ```
@@ -58,7 +58,7 @@ _Note_: config_grids.xml contains edits for both the ne240-ne240 (Colin) and ne3
 Use the LULCC_CESMVR scripts to create and build a new case on the desired grid
 ```
 cd $BASE_DIR
-export $USER=<username>
+export year=<year-of-landuse>
 ./LULCC_CESMVR/scripts/cesm_create_case_script_<ne30_ne30/ne30_ne240/ne240_ne240>.sh
 ```
 
