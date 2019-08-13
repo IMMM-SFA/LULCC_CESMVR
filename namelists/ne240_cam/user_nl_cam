@@ -1,0 +1,44 @@
+! Users should add all user specific namelist changes below in the form of 
+! namelist_var = new_namelist_value 
+
+! Input datasets
+ncdata = '/global/project/projectdirs/m2702/deva400/cesm_vr_modifications/ne0CONUSne30x8/glade/u/home/zarzycki/work/ASD2017_files/atm/cam/inic/homme/f.asd2017.cesm20b05.FAMIPC6CLM5.ne0conus30x8_t12.cam.i.1980-01-01-00000.nc'
+bnd_topo='/global/project/projectdirs/m2702/deva400/cesm_vr_modifications/ne0CONUSne30x8/glade/p/work/zarzycki/ASD2017_files/atm/cam/topo/conus_30_x8_nc3000_Co060_Fi001_MulG_PF_CONUS_Nsw042_20170417.nc'
+drydep_srf_file='/global/project/projectdirs/m2702/deva400/cesm_vr_modifications/ne0CONUSne30x8/glade/p/work/zarzycki/ASD2017_files/atm/cam/chem/trop_mam/atmsrf_ne0np4conus30x8_161116.nc'
+
+! V-R requirements
+se_mesh_file = '/global/project/projectdirs/m2702/deva400/cesm_vr_modifications/ne0CONUSne30x8/glade/p/work/zarzycki/grids/exodus/conus_30_x8.g'
+se_ne=0
+
+! Timestepping
+se_nsplit=10
+se_rsplit=3
+se_hypervis_subcycle=4
+se_ftype=0
+
+! Numerical diffusion settings
+se_nu=1.0e13
+se_nu_div=1.0e13
+se_nu_p = 1.0e13
+se_nu_top = 2.0e5
+se_fine_ne=120
+se_hypervis_power=3.322
+se_max_hypervis_courant=1.9
+se_hypervis_on_plevs = .false.
+
+!fincl2='PSL:A','TS:A','TREFHT:A','TREFHTMN:M','TREFHTMX:X','PRECT:A','PRECL:A','PRECSL:A','PRECSC:A','PRECTMX:A','TMQ:A','Z500:A','T500:A','U500:A','V500:A','WSPDSRFAV:A','U200:A','V200:A','T200:A','U850:A','V850:A','T850:A','Q850:A','UBOT:A','VBOT:A','QBOT:A','Z050:A','T010:A','U010:A','FSNTOA:A','FLUT:A','LHFLX:A','SHFLX:A','FSNS:A','FLNS:A','FSNSC:A','FLNSC:A','TAUX:A','TAUY:A','ICEFRAC:A','U','V','T','OMEGA','PS','Z500','Z3','V850','TSMN','TSMX','TREFMNAV','TREFMXAV'
+
+!fincl3='PSL:A','TREFHT:I','QREFHT:I','TS:I','PS:I','TROP_P:I','TROP_T:I','FSNS:A','FLNS:A','FSDS:A','FLDS:A','CLDTOT:A','CLDLOW:A','CLDMED:A','CLDHGH:A','TGCLDLWP:A','TGCLDIWP:A','PRECT:A','TMQ:A','V850:A','U500:A','V500:A','Q850:A'
+
+!fincl4='U850:I','U500:I','U200:I','V850:I','V500:I','V200:I','T850:I','T500:I','T400:I','T300:I','T200:I','Z1000:I','Z500:I','Z300:I','Z200:I','PSL:I','PS:I','TS:I','U10:I','UBOT:I','VBOT:I','PRECT:I','PRECC:A','PRECL:A','FLUT:I','CLDTOT:I','PSL:I','TMQ:I','U10:I','OMEGA850:I','OMEGA500:I'
+
+!fincl5='PRECT:A','PRECC:A'
+
+mfilt  = 1, 365, 120, 240, 240
+nhtfrq = 0, -24,  -6,  -3,  -1
+ndens  = 2,2,2,2,2
+
+!inithist = 'DAILY'
+
+history_amwg = .true.
+history_vdiag = .true. 

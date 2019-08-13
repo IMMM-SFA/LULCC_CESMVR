@@ -1,0 +1,57 @@
+!----------------------------------------------------------------------------------
+! Users should add all user specific namelist changes below in the form of 
+! namelist_var = new_namelist_value 
+!
+! EXCEPTIONS: 
+! Set use_cndv           by the compset you use and the CLM_BLDNML_OPTS -dynamic_vegetation setting
+! Set use_vichydro       by the compset you use and the CLM_BLDNML_OPTS -vichydro           setting
+! Set use_cn             by the compset you use and CLM_BLDNML_OPTS -bgc  setting
+! Set use_crop           by the compset you use and CLM_BLDNML_OPTS -crop setting
+! Set spinup_state       by the CLM_BLDNML_OPTS -bgc_spinup      setting
+! Set irrigate           by the CLM_BLDNML_OPTS -irrig .true.    setting
+! Set co2_ppmv           with CCSM_CO2_PPMV                      option
+! Set dtime              with L_NCPL                             option
+! Set fatmlndfrc         with LND_DOMAIN_PATH/LND_DOMAIN_FILE    options
+! Set finidat            with RUN_REFCASE/RUN_REFDATE/RUN_REFTOD options for hybrid or branch cases
+!                        (includes $inst_string for multi-ensemble cases)
+!                        or with CLM_FORCE_COLDSTART to do a cold start
+!                        or set it with an explicit filename here.
+! Set maxpatch_glcmec    with GLC_NEC                            option
+! Set glc_do_dynglacier  with GLC_TWO_WAY_COUPLING               env variable
+!----------------------------------------------------------------------------------
+
+use_init_interp = .true.
+init_interp_fill_missing_with_natveg = .true.
+create_crop_landunit = .true.
+check_finidat_year_consistency = .false.
+
+flanduse_timeseries = ""
+fsurdat = "/global/project/projectdirs/m2702/deva400/LULCC_Production_runs_files/ne30_ne30/surfdata_ne30np4_78pfts_CMIP6_simyr1850_c170824.nc"
+finidat='/global/project/projectdirs/m2702/deva400/LULCC_Production_runs_files/ne30_ne30/clm50_r270_1deg_GSWP3V1_iso_newpopd_hist.clm2.r.2015-01-01-00000.nc'
+
+check_dynpft_consistency = .false.
+do_harvest = .false.
+do_transient_crops = .false.
+do_transient_pfts = .false.
+
+! h1 stream
+!hist_fincl2 = 'GPP', 'NPP', 'AGNPP', 'TLAI', 'TOTVEGC', 'TSA','TREFMNAV','TREFMXAV', 'BTRANMN', 'NPP_NUPTAKE', 'GRAINC_TO_FOOD', 'Vcmx25Z', 'FSH', 'NFERTILIZATION', 'AR', 'VEGWP', 'FCTR', 'FCEV', 'FGEV', 'FIRE', 'FSR', 'HTOP', 'FIRA', 'FSA', 'HR', 'GSSUN', 'GSSHA'
+
+! h2 stream
+!hist_fincl3 = 'FSR', 'H2OSNO', 'Q2M', 'SNOWDP', 'TSA', 'TREFMNAV', 'TREFMXAV', 'TG', 'QRUNOFF', 'FSH', 'FIRE', 'FIRA', 'FGR', 'EFLX_LH_TOT', 'RH2M', 'TLAI', 'GPP', 'NPP', 'SOILWATER_10CM', 'TOTSOILLIQ', 'TOTSOILICE', 'AR', 'HR','DWT_CONV_CFLUX_PATCH' 'WOOD_HARVESTC', 'U10', 'DWT_WOOD_PRODUCTC_GAIN_PATCH','GRAINC_TO_FOOD', 'SLASH_HARVESTC', 'TSOI_10CM', 'COL_FIRE_CLOSS', 'DWT_SLASH_CFLUX', 'QIRRIG', 'URBAN_HEAT', 'WASTEHEAT', 'HTOP', 'FROOTC:I','TBOT'
+
+! h3 stream
+!hist_fincl4 = 'SOILWATER_10CM', 'TOTSOILLIQ', 'TOTSOILICE', 'GPP', 'NPP', 'AR', 'HR', 'EFLX_LH_TOT', 'FSH', 'FGR12', 'FSM', 'QSNOEVAP', 'TLAI', 'QDRAI', 'QDRAI_PERCH', 'QOVER', 'QFLX_SUB_SNOW', 'FSA', 'FIRA', 'H2OSNO', 'SNOCAN', 'QSNOFRZ', 'QFLX_SNOW_DRAIN', 'SNOWDP', 'H2OSFC', 'TV', 'TG', 'TAUX', 'TAUY', 'QVEGT', 'TWS', 'H2OCAN', 'ALT', 'QVEGE', 'QSOIL', 'FSDS','FSNO','SNOFSRVD','SNOFSRVI','SNOFSRND','SNOFSRNI','FSDSVD','FSDSVI','FSDSND','FSDSNI','SNOWLIQ','SOILICE','SOILLIQ','QINTR','SNOBCMSL','TSOI','SNOTXMASS','SNOWICE','SNOWLIQ','QRUNOFF','RAIN','SNOW'
+
+! h4 stream
+!hist_fincl5 = 'TREFMXAV','TREFMNAV'
+
+! h5 stream
+!hist_fincl6 = 'GPP','AR','HR','TSA','RH2M','SOILWATER_10CM:I','FSH','EFLX_LH_TOT','FSDS','QRUNOFF','QFLX_SUB_SNOW:I'
+
+hist_mfilt = 1,1,1,365,365,2920
+hist_dov2xy = .true.,.false.,.false.,.true.,.false.,.true.
+hist_nhtfrq = 0,0,0,-24,-24,-3
+hist_type1d_pertape = ' ',' ','LAND',' ','LAND',' '
+
+
