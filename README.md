@@ -64,7 +64,7 @@ export year=<year-of-landuse>
 
 ### Postprocessing model output
 
-https://www.ncl.ucar.edu/Applications/Scripts/homme_1.ncl
+https://www.ncl.ucar.edu/Applications/Scripts/homme_1.ncl  
 https://github.com/zarzycki/ncl-zarzycki/tree/master/projects/regridding  
 NCL scripts provided in _postprocessing_ folder may be used to regrid the ne240 CLM outputs
 
