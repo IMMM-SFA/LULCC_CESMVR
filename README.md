@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/201975013.svg)](https://zenodo.org/badge/latestdoi/201975013)
+
 # LULCC Experiments using CESMVR
 
 Repository containing driving scripts and model configuration to set up CESM2 simulations used for land use land cover change experiments on National Energy Research Scientific Computing Center (NERSC) high performance computing machine, CORI. 
